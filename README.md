@@ -18,22 +18,22 @@ The REST API to the example app is described below.
 ## Fields Details
 Name | Type | Defualt | Required | Description | Example
 :--|:--|:---|:---|:---|:---:
-name                        | string                |       | Yes | name of campaign | `black friday campaign`
-type                        | string literal        |       | Yes | discount type, precentage or nis only. | `% | ₪`
-amount                      | number                |       | Yes | discount amount. | `5`
-additionalDiscountAllowed   | boolean               | false | No  | defualt value is `false`, if `true` will alllow additional discount. | `true`
-minimumCartPrice            | number                |   0   | No  | defualt value is `0`, otherwise, discount will apply only if cart price is greater or equal to minimum cart price | `350`  
-maxUsage                    | number                |   1   | No  | the maximum usage per `Coupon`. | `5`
-bonusDiscount               | number                |   0   | No  | add bonus discount in nis per each `Coupon` in campaign. | `20`
+name                        | string                |       | Yes | name of campaign | 'black friday campaign'
+type                        | string literal        |       | Yes | discount type, precentage or nis only. | '% | ₪'
+amount                      | number                |       | Yes | discount amount. | '5'
+additionalDiscountAllowed   | boolean               | false | No  | defualt value is `false`.<br>if `true` will alllow additional discount. | true
+minimumCartPrice            | number                |   0   | No  | defualt value is `0`.<br>otherwise, discount will apply only if cart price<br>is greater or equal to minimum cart price | 350 
+maxUsage                    | number                |   1   | No  | the maximum usage per `Coupon`. | 5
+bonusDiscount               | number                |   0   | No  | add bonus discount in nis<br>for all coupons in campaign. | 20
 startDate                   | date Time (ISO-8601)  |  null | No  | start date of campaign. | `2024-01-21T13:00:13.180Z`
 endDate                     | date Time (ISO-8601)  |  null | No  | end date of campaign.   | `2024-01-23T13:00:13.180Z`
-groupType                   | string literal        |  All  | No  | discount by group type, All = products, Tag = products, Category = products | `'All' | 'Tag' | 'Category'`
-groupId                     | number                |   0   | No  | the group id, Required in case of `groupType` is 'Tag' or 'Category' | `123123`
-numberOfCoupons             | number                |   1   | No  | the number of coupon that generate from the system, in case of `couponPrefix`, it means you choose the code of the coupon, the number of coupon in this campaign will be `1` | `999`
-couponPrefix                | string                |  ''   | No  | a coupon name that you will detremine, if value is not empty the `numberOfCoupons` will be `1`, otherwise the system will generate generic custom coupon codes | `testcoupon2024`
-charactersType              | number                |   0   | No  | a coupon characters type, will generate coupon code with letter & numbers or numbers only, 0 = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 1 = '0123456789' | `0` | `1`
+groupType                   | string literal        |  All  | No  | discount by group type.<br>All = products<br>Tag = products<br>Category = products | `'All' | 'Tag' | 'Category'`
+groupId                     | number                |   0   | No  | the group id<br>Required<br>in case of `groupType` is 'Tag' or 'Category' | `123123`
+numberOfCoupons             | number                |   1   | No  | the number of coupon that generate from the system<br>in case of `couponPrefix`<br>it means you choose the code of the coupon<br>the number of coupon in this campaign will be `1` | `999`
+couponPrefix                | string                |  ''   | No  | a coupon name that you will detremine<br>if value is `not` empty<br> `numberOfCoupons` will be `1`<br>otherwise, the system will generate<br>generics custom coupon codes | `testcoupon2024`
+charactersType              | number                |   0   | No  | a coupon characters type<br>will generate coupon code<br>with letters & numbers or numbers only<br>0 = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'<br>1 = '0123456789' | `0` | `1`
 imported                    | boolean               |       | No  | in case of creating `customCodes` coupons, send `true` | `true`
-customCodes                 | Array<string>         |       | No  | if imported is `true`, Required to send array of string with code coupons, must be unique's code, if there is a code that already exists, the campaign will not create.
+customCodes                 | Array<string>         |       | No  | if imported is `true`<br>Required to send array of string<br>represent the codes coupon<br>must be unique's code<br>if there is a code that already exists<br>the campaign will not create.
 
 ## Get list of `Campaign`
 
