@@ -31,11 +31,8 @@ endDate                     | date Time (ISO-8601)  |  null | No  | end date of 
 groupType                   | string literal        |  All  | No  | discount by group type, All = products, Tag = products, Category = products | `'All' | 'Tag' | 'Category'`
 groupId                     | number                |   0   | No  | the group id, Required in case of `groupType` is 'Tag' or 'Category' | `123123`
 numberOfCoupons             | number                |   1   | No  | the number of coupon that generate from the system, in case of `couponPrefix`, it means you choose the code of the coupon, the number of coupon in this campaign will be `1` | `999`
-
 couponPrefix                | string                |  ''   | No  | a coupon name that you will detremine, if value is not empty the `numberOfCoupons` will be `1`, otherwise the system will generate generic custom coupon codes | `testcoupon2024`
-
 charactersType              | number                |   0   | No  | a coupon characters type, will generate coupon code with letter & numbers or numbers only, 0 = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 1 = '0123456789' | `0` | `1`
-
 imported                    | boolean               |       | No  | in case of creating `customCodes` coupons, send `true` | `true`
 customCodes                 | Array<string>         |       | No  | if imported is `true`, Required to send array of string with code coupons, must be unique's code, if there is a code that already exists, the campaign will not create.
 
