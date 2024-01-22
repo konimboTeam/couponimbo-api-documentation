@@ -17,7 +17,7 @@ The REST API to the example app is described below.
 
 ## Fields Details
 Name | Type | Defualt | Required | Description | Example
-:--|:--|:---|:---|:---|:---:
+:--|:--:|:--:|:--:|:---|:---:
 name                        | string                |       | Yes | name of campaign | 'black friday campaign'
 type                        | string literal        |       | Yes | discount type, precentage or nis only. | '% or ₪'
 amount                      | number                |       | Yes | discount amount. | '5'
