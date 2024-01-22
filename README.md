@@ -11,6 +11,7 @@ The REST API to the example app is described below.
 ## API Key
 The authorization header will be automatically generated when you send the request. Learn more about [API Key](https://learning.postman.com/docs/sending-requests/authorization/authorization-types/#api-key)
  authorization.
+ 
 ![Alt text](/screenshots/auth-apikey.png)
 
 ## Endpoints
