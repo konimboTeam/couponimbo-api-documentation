@@ -17,9 +17,9 @@ The REST API to the example app is described below.
 
 ## Fields Details
 Name | Type | Defualt | Required | Description | Example
-:--|:--|:---|---:|---:|---:
+:--:|:--:|:---:|:---:|:---:|:---:
 name                        | string                |       | Yes | name of campaign | `black friday campaign`
-type                        | string literal        |       | Yes | discount type, precentage or nis only. | `'%' | '₪'`
+type                        | string literal        |       | Yes | discount type, precentage or nis only. | `% | ₪`
 amount                      | number                |       | Yes | discount amount. | `5`
 additionalDiscountAllowed   | boolean               | false | No  | defualt value is `false`, if `true` will alllow additional discount. | `true`
 minimumCartPrice            | number                |   0   | No  | defualt value is `0`, otherwise, discount will apply only if cart price is greater or equal to minimum cart price | `350`  
