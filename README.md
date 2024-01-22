@@ -9,7 +9,6 @@ The REST API to the example app is described below.
 # CAMPAIGNS
 
 ## Endpoints
-### EndPoints
 * [GET /dev/couponimbo/api/v1/store/{subdomain}/campaigns](#user-content-get-list-of-campaign)
 * [POST /dev/couponimbo/api/v1/store/{subdomain}/campaigns](#user-content-create-a-new-campaign)
 * [GET /dev/couponimbo/api/v1/store/{subdomain}/campaigns/{campaignId}](#user-content-cet-a-specific-campaign)
