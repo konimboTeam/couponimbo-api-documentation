@@ -23,7 +23,6 @@ type                        | string literal        |       | Yes | discount typ
 amount                      | number                |       | Yes | discount amount. | `5`
 additionalDiscountAllowed   | boolean               | false | No  | defualt value is `false`, if `true` will alllow additional discount. | `true`
 minimumCartPrice            | number                |   0   | No  | defualt value is `0`, otherwise, discount will apply only if cart price is greater or equal to minimum cart price | `350`  
-
 maxUsage                    | number                |   1   | No  | the maximum usage per `Coupon`. | `5`
 bonusDiscount               | number                |   0   | No  | add bonus discount in nis per each `Coupon` in campaign. | `20`
 startDate                   | date Time (ISO-8601)  |  null | No  | start date of campaign. | `2024-01-21T13:00:13.180Z`
