@@ -10,10 +10,10 @@ The REST API to the example app is described below.
 
 ## Endpoints
 ### EndPoints
-* [GET /dev/couponimbo/api/v1/store/{subdomain}/campaigns](#user-content-Get-list-of-`Campaign`)
-* [POST /dev/couponimbo/api/v1/store/{subdomain}/campaigns](#user-content-Create-a-new-`Campaign`)
-* [GET /dev/couponimbo/api/v1/store/{subdomain}/campaigns/{campaignId}](#user-content-Get-a-specific-`Campaign`)
-* [PUT /dev/couponimbo/api/v1/store/{subdomain}/campaigns/{campaignId}/active](#user-content-Put-an-active-or-deactive-`campaign`)
+* [GET /dev/couponimbo/api/v1/store/{subdomain}/campaigns](#user-content-get-list-of-campaign)
+* [POST /dev/couponimbo/api/v1/store/{subdomain}/campaigns](#user-content-create-a-new-campaign)
+* [GET /dev/couponimbo/api/v1/store/{subdomain}/campaigns/{campaignId}](#user-content-cet-a-specific-campaign)
+* [PUT /dev/couponimbo/api/v1/store/{subdomain}/campaigns/{campaignId}/active](#user-content-put-an-active-or-deactive-campaign)
 
 ## Fields Details
 Name | Type | Defualt | Required | Description | Example
