@@ -38,7 +38,7 @@ numberOfCoupons             | number                |   1   | No  | the number o
 couponPrefix                | string                |  ''   | No  | a coupon name that you will detremine<br>if value is `not` empty<br> `numberOfCoupons` will be `1`<br>otherwise, the system will generate<br>generics custom coupon codes | `testcoupon2024`
 charactersType              | number                |   0   | No  | a coupon characters type<br>will generate coupon code<br>with letters & numbers or numbers only<br>0 = letters & numbers<br>1 = numbers only | `0` | `0` or `1`
 imported                    | boolean               |       | No  | in case of creating `customCodes` coupons, send `true` | `true`
-customCodes                 | Array<string>         |       | No  | if imported is `true`<br>Required to send array of string<br>represent the codes coupon<br>must be unique's code<br>if there is a code that already exists<br>the campaign will not create. | `["111","222","333"]`
+customCodes                 | Array<string>         |       | No  | if imported is `true`<br>Required to send array of string<br>represent the codes coupon<br>must be unique's code<br>with minimum 4 digits<br>if there is a code that already exists<br>the campaign will not create. | `["1111","2222","3332"]`
 
 ## Get list of `Campaign`
 
