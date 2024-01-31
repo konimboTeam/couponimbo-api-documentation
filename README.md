@@ -6,6 +6,9 @@ This docs provide with more information how to use Couponimbo API.
 
 The REST API to the example app is described below.
 
+* [CAMPAIGNS](#user-content-campaigns)
+* [COUPONS](#user-content-coupons)
+
 ## Authorization - API Key
 The authorization header will be automatically generated when you send the request. Learn more about [API Key](https://learning.postman.com/docs/sending-requests/authorization/authorization-types/#api-key)
  authorization.
@@ -159,3 +162,35 @@ customCodes                 | Array<string>         |       | No  | if imported 
         "id": "Cwhx",
         "active": false
     }
+
+# COUPONS
+
+## Endpoints
+* [GET /dev/couponimbo/api/v1/store/{subdomain}/campaigns/{campaignId}/coupons](#user-content-get-list-of-coupons)
+
+## Get list of `Coupons`
+
+### Request
+
+`GET /dev/couponimbo/api/v1/store/{subdomain}/campaigns/{campaignId}/coupons`
+
+    curl -i -H 'Accept: application/json' http://localhost:3000/dev/couponimbo/api/v1/store/mortest/campaigns/RUgi/coupons
+
+### Response
+
+    HTTP/1.1 200 OK
+    Date: Thu, 24 Feb 2011 12:36:30 GMT
+    Status: 200 OK
+    Connection: close
+    Content-Type: application/json
+    Content-Length: 2
+
+{
+    "status": true,
+    "data": [
+        {
+            "Code": "testcoupontag",
+            "UsesLeft": 1
+        }
+    ]
+}
