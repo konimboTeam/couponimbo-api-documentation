@@ -37,12 +37,12 @@ The authorization header will be automatically generated when you send the reque
 
 ### Response
 
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 2
+HTTP/1.1 200 OK
+Date: Thu, 24 Feb 2011 12:36:30 GMT
+Status: 200 OK
+Connection: close
+Content-Type: application/json
+Content-Length: 2
 
     [
         {
@@ -96,16 +96,33 @@ customCodes                 | Array<string>         |       | No  | if imported 
 
 ### Response
 
-    HTTP/1.1 201 Created
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 201 Created
-    Connection: close
-    Content-Type: application/json
-    Location: /thing/1
-    Content-Length: 36
+HTTP/1.1 201 Created
+Date: Thu, 24 Feb 2011 12:36:30 GMT
+Status: 201 Created
+Connection: close
+Content-Type: application/json
+Location: /thing/1
+Content-Length: 36
 
     {
-        "id":"Cwhx"
+        "status": true,
+        "data": {
+            "Id": "OLLg",
+            "Name": "test campaign",
+            "Active": true,
+            "Type": "%",
+            "Amount": 5,
+            "AdditionalDiscountAllowed": false,
+            "MinimumCartPrice": 0,
+            "MaxUsage": 1,
+            "BonusDiscount": 0,
+            "StartDate": null,
+            "EndDate": null,
+            "GroupType": "All",
+            "GroupId": 0,
+            "NumberOfCoupons": 99,
+            "CreatedAt": "2024-02-12T11:21:02.731Z"
+        }
     }
 
 ## Get a specific `Campaign`
@@ -118,32 +135,35 @@ customCodes                 | Array<string>         |       | No  | if imported 
 
 ### Response
 
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 36
+HTTP/1.1 200 OK
+Date: Thu, 24 Feb 2011 12:36:30 GMT
+Status: 200 OK
+Connection: close
+Content-Type: application/json
+Content-Length: 36
 
-        {
-            "id":"Cwhx",
-            "name":"dev - api",
-            "active":true,
-            "amount":5,
-            "type":"%",
-            "numberOfCoupons":999,
-            "maxUsage":1,
-            "additionalDiscountAllowed":false,
-            "bonusDiscount":0,
-            "groupId":0,
-            "groupType":"All",
-            "minimumCartPrice":0,
-            "startDate":null,
-            "endDate":null,
-            "totalUsage":0,
-            "testCoupon":"eAWOt4Pr-Cwhx",
-            "createdAt":"2024-01-21T13:00:13.180Z"
+    {
+        "status": true,
+        "data": {
+            "id": "HJVA",
+            "name": "קמפיין בדיקה api - 30 קופונים",
+            "active": true,
+            "amount": 5,
+            "type": "%",
+            "numberOfCoupons": 100,
+            "maxUsage": 1,
+            "additionalDiscountAllowed": false,
+            "bonusDiscount": 0,
+            "groupId": 0,
+            "groupType": "All",
+            "minimumCartPrice": 0,
+            "startDate": null,
+            "endDate": null,
+            "totalUsage": 0,
+            "testCoupon": "OSzKPRtI-HJVA",
+            "createdAt": "2024-02-04T10:23:59.913Z"
         }
+    }
 
 ## Put an active or deactive `campaign`
 
@@ -155,16 +175,32 @@ customCodes                 | Array<string>         |       | No  | if imported 
 
 ### Response
 
-    HTTP/1.1 404 Not Found
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 404 Not Found
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 35
+HTTP/1.1 404 Not Found
+Date: Thu, 24 Feb 2011 12:36:30 GMT
+Status: 404 Not Found
+Connection: close
+Content-Type: application/json
+Content-Length: 35
 
     {
-        "id": "Cwhx",
-        "active": false
+        "status": true,
+        "data": {
+            "Id": "HJVA",
+            "Name": "קמפיין בדיקה api - 30 קופונים",
+            "Active": false,
+            "Type": "%",
+            "Amount": 5,
+            "AdditionalDiscountAllowed": false,
+            "MinimumCartPrice": 0,
+            "MaxUsage": 1,
+            "BonusDiscount": 0,
+            "StartDate": null,
+            "EndDate": null,
+            "GroupType": "All",
+            "GroupId": 0,
+            "NumberOfCoupons": 100,
+            "CreatedAt": "2024-02-04T10:23:59.913Z"
+        }
     }
 
 # COUPONS
@@ -178,23 +214,27 @@ customCodes                 | Array<string>         |       | No  | if imported 
 
 `GET /v1/store/{subdomain}/campaigns/{campaignId}/coupons`
 
-    curl -i -H 'Accept: application/json' https://couponimboapi.konimbo.co.il/v1/store/mortest/campaigns/RUgi/coupons
+    curl -i -H 'Accept: application/json' https://couponimboapi.konimbo.co.il/v1/store/mortest/campaigns/OLLg/coupons
 
 ### Response
 
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 2
+HTTP/1.1 200 OK
+Date: Thu, 24 Feb 2011 12:36:30 GMT
+Status: 200 OK
+Connection: close
+Content-Type: application/json
+Content-Length: 2
 
-{
-    "status": true,
-    "data": [
-        {
-            "Code": "testcoupontag",
-            "UsesLeft": 1
-        }
-    ]
-}
+    {
+        "status": true,
+        "data": [
+            {
+                "Code": "19rT1skc-OLLg",
+                "UsesLeft": 1
+            },
+            {
+                "Code": "6OiM2lnl-OLLg",
+                "UsesLeft": 1
+            }
+        ]
+    }
