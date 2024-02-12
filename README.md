@@ -4,7 +4,11 @@ This docs provide with more information how to use Couponimbo API.
 
 # REST API
 
-The REST API to the example app is described below.
+The REST API to the Couponimbo app is described below.
+
+### Base URL
+
+https://couponimboapi.konimbo.co.il/v1/
 
 * [CAMPAIGNS](#user-content-campaigns)
 * [COUPONS](#user-content-coupons)
@@ -18,18 +22,18 @@ The authorization header will be automatically generated when you send the reque
 # CAMPAIGNS
 
 ## Endpoints
-* [GET /dev/couponimbo/api/v1/store/{subdomain}/campaigns](#user-content-get-list-of-campaign)
-* [POST /dev/couponimbo/api/v1/store/{subdomain}/campaigns](#user-content-create-a-new-campaign)
-* [GET /dev/couponimbo/api/v1/store/{subdomain}/campaigns/{campaignId}](#user-content-cet-a-specific-campaign)
-* [PUT /dev/couponimbo/api/v1/store/{subdomain}/campaigns/{campaignId}/active](#user-content-put-an-active-or-deactive-campaign)
+* [GET /v1/store/{subdomain}/campaigns](#user-content-get-list-of-campaign)
+* [POST /v1/store/{subdomain}/campaigns](#user-content-create-a-new-campaign)
+* [GET /v1/store/{subdomain}/campaigns/{campaignId}](#user-content-cet-a-specific-campaign)
+* [PUT /v1/store/{subdomain}/campaigns/{campaignId}/active](#user-content-put-an-active-or-deactive-campaign)
 
 ## Get list of `Campaign`
 
 ### Request
 
-`GET /dev/couponimbo/api/v1/store/{subdomain}/campaigns`
+`GET /v1/store/{subdomain}/campaigns`
 
-    curl -i -H 'Accept: application/json' http://localhost:3000/dev/couponimbo/api/v1/store/mortest/campaigns
+    curl -i -H 'Accept: application/json' https://couponimboapi.konimbo.co.il/v1/store/mortest/campaigns
 
 ### Response
 
@@ -86,9 +90,9 @@ customCodes                 | Array<string>         |       | No  | if imported 
 
 ### Request
 
-`POST /dev/couponimbo/api/v1/store/{subdomain}/campaigns`
+`POST /v1/store/{subdomain}/campaigns`
 
-    curl -i -H 'Accept: application/json' -d 'name=black friday campaign&type=%&amount=5&numberOfCoupons=999' http://localhost:3000//dev/couponimbo/api/v1/store/mortest/campaigns
+    curl -i -H 'Accept: application/json' -d 'name=black friday campaign&type=%&amount=5&numberOfCoupons=999' https://couponimboapi.konimbo.co.il/v1/store/mortest/campaigns
 
 ### Response
 
@@ -108,9 +112,9 @@ customCodes                 | Array<string>         |       | No  | if imported 
 
 ### Request
 
-`GET /dev/couponimbo/api/v1/store/{subdomain}/campaigns/{campaignId}`
+`GET /v1/store/{subdomain}/campaigns/{campaignId}`
 
-    curl -i -H 'Accept: application/json' http://localhost:3000/dev/couponimbo/api/v1/store/mortest/campaigns/Cwhx
+    curl -i -H 'Accept: application/json' https://couponimboapi.konimbo.co.il/v1/store/mortest/campaigns/Cwhx
 
 ### Response
 
@@ -145,9 +149,9 @@ customCodes                 | Array<string>         |       | No  | if imported 
 
 ### Request
 
-`PUT /dev/couponimbo/api/v1/store/{subdomain}/campaigns/{campaignId}/active`
+`PUT /v1/store/{subdomain}/campaigns/{campaignId}/active`
 
-    curl -i -H 'Accept: application/json' -d 'active=false' http://localhost:3000/dev/couponimbo/api/v1/store/mortest/campaigns/l_nG/active
+    curl -i -H 'Accept: application/json' -d 'active=false' https://couponimboapi.konimbo.co.il/v1/store/mortest/campaigns/l_nG/active
 
 ### Response
 
@@ -166,15 +170,15 @@ customCodes                 | Array<string>         |       | No  | if imported 
 # COUPONS
 
 ## Endpoints
-* [GET /dev/couponimbo/api/v1/store/{subdomain}/campaigns/{campaignId}/coupons](#user-content-get-list-of-coupons)
+* [GET /v1/store/{subdomain}/campaigns/{campaignId}/coupons](#user-content-get-list-of-coupons)
 
 ## Get list of `Coupons`
 
 ### Request
 
-`GET /dev/couponimbo/api/v1/store/{subdomain}/campaigns/{campaignId}/coupons`
+`GET /v1/store/{subdomain}/campaigns/{campaignId}/coupons`
 
-    curl -i -H 'Accept: application/json' http://localhost:3000/dev/couponimbo/api/v1/store/mortest/campaigns/RUgi/coupons
+    curl -i -H 'Accept: application/json' https://couponimboapi.konimbo.co.il/v1/store/mortest/campaigns/RUgi/coupons
 
 ### Response
 
