@@ -8,7 +8,7 @@ The REST API to the Couponimbo app is described below.
 
 ### Base URL
 
-https://couponimboapi.konimbo.co.il/v1/
+    https://couponimboapi.konimbo.co.il/v1/
 
 * [CAMPAIGNS](#user-content-campaigns)
 * [COUPONS](#user-content-coupons)
