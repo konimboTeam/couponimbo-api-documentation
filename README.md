@@ -37,12 +37,12 @@ The authorization header will be automatically generated when you send the reque
 
 ### Response
 
-HTTP/1.1 200 OK
-Date: Thu, 24 Feb 2011 12:36:30 GMT
-Status: 200 OK
-Connection: close
-Content-Type: application/json
-Content-Length: 2
+    HTTP/1.1 200 OK
+    Date: Thu, 24 Feb 2011 12:36:30 GMT
+    Status: 200 OK
+    Connection: close
+    Content-Type: application/json
+    Content-Length: 2
 
     [
         {
@@ -96,13 +96,13 @@ customCodes                 | Array<string>         |       | No  | if imported 
 
 ### Response
 
-HTTP/1.1 201 Created
-Date: Thu, 24 Feb 2011 12:36:30 GMT
-Status: 201 Created
-Connection: close
-Content-Type: application/json
-Location: /thing/1
-Content-Length: 36
+    HTTP/1.1 201 Created
+    Date: Thu, 24 Feb 2011 12:36:30 GMT
+    Status: 201 Created
+    Connection: close
+    Content-Type: application/json
+    Location: /thing/1
+    Content-Length: 36
 
     {
         "status": true,
@@ -135,12 +135,12 @@ Content-Length: 36
 
 ### Response
 
-HTTP/1.1 200 OK
-Date: Thu, 24 Feb 2011 12:36:30 GMT
-Status: 200 OK
-Connection: close
-Content-Type: application/json
-Content-Length: 36
+    HTTP/1.1 200 OK
+    Date: Thu, 24 Feb 2011 12:36:30 GMT
+    Status: 200 OK
+    Connection: close
+    Content-Type: application/json
+    Content-Length: 36
 
     {
         "status": true,
@@ -175,12 +175,12 @@ Content-Length: 36
 
 ### Response
 
-HTTP/1.1 404 Not Found
-Date: Thu, 24 Feb 2011 12:36:30 GMT
-Status: 404 Not Found
-Connection: close
-Content-Type: application/json
-Content-Length: 35
+    HTTP/1.1 404 Not Found
+    Date: Thu, 24 Feb 2011 12:36:30 GMT
+    Status: 404 Not Found
+    Connection: close
+    Content-Type: application/json
+    Content-Length: 35
 
     {
         "status": true,
@@ -218,12 +218,12 @@ Content-Length: 35
 
 ### Response
 
-HTTP/1.1 200 OK
-Date: Thu, 24 Feb 2011 12:36:30 GMT
-Status: 200 OK
-Connection: close
-Content-Type: application/json
-Content-Length: 2
+    HTTP/1.1 200 OK
+    Date: Thu, 24 Feb 2011 12:36:30 GMT
+    Status: 200 OK
+    Connection: close
+    Content-Type: application/json
+    Content-Length: 2
 
     {
         "status": true,
